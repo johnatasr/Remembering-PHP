@@ -63,34 +63,36 @@ interface LoginInterface {
 
 
 class Paypal implements PaymentInterface, LoginInterface{
-    public function loginFirst(){};
-    public function payNow(){};
+    public function loginFirst(){}
+    public function payNow(){}
     public function paymentProcess(){
         $this->loginFirst();
         $this->payNow();
-    };
+    }
 };
 
 class Visa implements PaymentInterface, LoginInterface{
-    public function payNow(){};
-    public function paymentProcess(){
-        $this->payNow();
-    };
-};
-
-class BankTransfer implements PaymentInterface, LoginInterface{
-    public function loginFirst(){};
-    public function payNow(){};
+    public function loginFirst(){}
+    public function payNow(){}
     public function paymentProcess(){
         $this->loginFirst();
         $this->payNow();
-    };
+    }
+};
+
+class BankTransfer implements PaymentInterface, LoginInterface{
+    public function loginFirst(){}
+    public function payNow(){}
+    public function paymentProcess(){
+        $this->loginFirst();
+        $this->payNow();
+    }
 }
 class Cash implements PaymentInterface{
-    public function payNow(){};
+    public function payNow(){}
     public function paymentProcess(){
         $this->payNow();
-    };
+    }
 }
 
 class BuyProduct {
